@@ -1,0 +1,279 @@
+/* Estilo general para el nav */
+.navbar {
+  width: 100%;
+  background-color: #0171DC;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: -3px 0;
+  pointer-events: none;
+}
+.navbar * {
+  pointer-events: auto; /* Permite la interacción dentro del navbar */
+}
+
+
+.navbar-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 38px;
+  background-color: #0171DC;
+  height: 100px;
+  pointer-events: none;
+}
+
+.navbar-brand{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #DBD3D3;
+}
+
+.navbar-brand img {
+  margin-bottom: -15px;
+}
+
+/* Icono de hamburguesa */
+.hamburger-icon {
+  width: 25px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Animación a "X" cuando el menú esté abierto */
+.hamburger-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+/* Dropdown */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+/* Estilos del botón del carrito */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.btn-cart img {
+  margin-left: 2px;
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #3066be;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.nav-item {
+  margin: 5px 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 20px;
+  color: #DBD3D3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #EC8305;
+  color: white;
+}
+
+/* Carrito */
+.btn-cart img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-bottom: -6px;
+  transition: transform 0.3s ease;
+}
+
+.btn-cart img:hover {
+  transform: scale(1.1);
+}
+
+/* Menú móvil */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  left: 13px;
+  z-index: 11;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 2px;
+  background-color: #DBD3D3;
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #DBD3D3;
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+.navbar-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #091057;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-mobile-menu.active {
+  display: flex;
+}
+
+.navbar-mobile-menu .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.navbar-mobile-menu .close-icon::before,
+.navbar-mobile-menu .close-icon::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #DBD3D3;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-mobile-menu .close-icon::before {
+  transform: rotate(45deg);
+}
+
+.navbar-mobile-menu .close-icon::after {
+  transform: rotate(-45deg);
+}
+
+.navbar-mobile-menu .nav-link {
+  font-size: 1.5rem;
+  padding: 15px;
+  color: #DBD3D3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar{
+    padding: 31px;
+  }
+  .navbar-middle {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block; 
+  }
+
+  .navbar-mobile-menu .nav-item {
+    margin-bottom: 20px;
+  }
+
+  /* Menú desplegable en móvil */
+  .navbar-mobile-menu.active {
+    display: flex; 
+  }
+
+  /* Asegúrate de que las nav-links ocupen el 100% del ancho */
+  .navbar-mobile-menu .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+}

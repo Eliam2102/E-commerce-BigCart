@@ -1,0 +1,286 @@
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 20px;
+  margin: 0 20px;
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .categories {
+    padding: 15px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 10px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories {
+    padding: 8px;
+    margin: 0 8px;
+  }
+}
+
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.categories-container {
+  width: 100%;
+}
+
+.categories-text {
+  margin-bottom: 30px;
+}
+
+.categories-title {
+  font-size: 4rem;
+  color: #333333;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.categories-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.categories-carousel {
+  overflow-x: auto;
+  display: flex;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa transparent;
+  margin: 20px 0;
+  padding-bottom: 20px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: -30px;
+  right: 20px;
+  font-size: 1rem;
+  background: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #333;
+  animation: fadeOut 4s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.carousel-card {
+  min-width: 240px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-links li {
+  margin: 5px 0;
+}
+
+.card-links a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.card-links a:hover {
+  color: #0056b3;
+}
+
+/* Scrollbar personalizado */
+.categories-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.categories-carousel::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+
+.categories-carousel::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .categories-title {
+    font-size: 2.2rem;
+  }
+
+  .categories-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .carousel-card {
+    min-width: 200px;
+    padding: 15px;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-section {
+    margin: 20px;
+    padding: 10px;
+    width: 560px;
+    margin-right: 17px;
+  }
+
+  .categories-title {
+    font-size: 2rem;
+  }
+
+  .categories-subtitle {
+    font-size: 1rem;
+  }
+
+  .carousel-wrapper {
+    gap: 15px;
+  }
+
+  .carousel-card {
+    min-width: 90px;
+    padding: 10px;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-section {
+    margin: 20px;
+    padding: 10px;
+    width: 364px;
+    margin-right: 17px;
+  }
+
+  .categories-title {
+    font-size: 1.8rem;
+  }
+
+  .categories-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .carousel-card {
+    min-width: 100px;
+    padding: 10px;
+    margin: 0 20px;
+  }
+
+  .carousel-wrapper {
+    gap: 10px;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+}

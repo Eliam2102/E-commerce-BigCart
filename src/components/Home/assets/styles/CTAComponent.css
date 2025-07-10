@@ -1,0 +1,31 @@
+.cta-container {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0171DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color: #ffff;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .cta-heading {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta-heading {
+      font-size: 1.5rem;
+    }
+  }

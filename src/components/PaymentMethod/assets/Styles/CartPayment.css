@@ -1,0 +1,267 @@
+/*CartPayment.css*/
+
+.cart-payment {
+    max-width: 600px;
+    min-width: 320px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid;
+    border-radius: 8px;
+  }
+  
+  .cart-payment h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Encabezado */
+  .encabezadoPayment {
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Íconos de tarjetas */
+  .iconsCard {
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+  }
+
+  .iconsCard img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .iconsCard img:hover {
+    transform: scale(1.1);
+  }
+  
+  .cart-payment form div {
+    margin-bottom: 1rem;
+  }
+
+  .cart-payment label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cart-payment input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+  }
+  
+  .cart-payment input:focus {
+    outline: none;
+    border-color: #3586FF;
+    box-shadow: 0 0 0 2px rgba(96, 150, 180, 0.2);
+  }
+  
+  .cart-payment .summary {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #eee9da;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .cart-payment .summary h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .cart-payment .summary p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .cart-payment button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4587ea;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cart-payment button[type="submit"]:hover {
+    background-color: #517d97;
+  }
+
+  .cardData{
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .error{
+    font-size: 12px;
+    color: rgb(174, 16, 16);
+  }
+
+
+  .payment-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .payment-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .success-modal {
+    background: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .success-modal h1 {
+    color: #4caf50;
+    margin-bottom: 10px;
+  }
+  
+  .success-modal p {
+    color: #555;
+    margin-top: 0;
+  }
+  
+  
+  /* Pestañas grandes */
+@media (min-width: 786px) {
+    .cart-payment {
+      max-width: 600px; 
+      margin: 3rem auto;
+      padding: 2rem;
+    }
+    
+    .encabezadoPayment h1 {
+      font-size: 1.6rem;
+      flex-direction: row;
+    }
+
+    .iconsCard {
+      margin-left: 40px;
+    }
+  
+    .iconsCard img {
+      width: 35px; /* Aumenta el tamaño en pantallas grandes */
+    }
+  
+    .cart-payment input {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    .cart-payment button[type="submit"] {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+
+    .cardData{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cardData input{
+        width: 260px;
+    }
+  }
+  
+  /* Pantallas Medianas*/
+  @media (min-width: 400px) and (max-width: 768px) {
+    .cart-payment {
+      max-width: 500px;
+      padding: 2rem 2rem;
+    }
+  
+    .cart-payment h1 {
+      font-size: 1.8rem;
+    }
+  
+    .cart-payment input {
+      font-size: 1rem;
+      padding: 0.85rem;
+    }
+  
+    .cart-payment button[type="submit"] {
+      font-size: 1rem;
+      padding: 0.85rem;
+    }
+  
+    .cardData {
+      flex-direction: row; /* Disponer Fecha y CVV lado a lado */
+      gap: 1rem;
+    }
+
+    .encabezadoPayment {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  
+    .iconsCard {
+      gap: 1.5rem;
+    }
+
+  }
+  
+  /* Pestañas pequeñas */
+  @media (max-width: 400px) {
+    .cart-payment {
+      padding: 1rem;
+      margin: 1.5rem 1.5rem;
+    }
+    
+    .encabezadoPayment h1 {
+      font-size: 1rem;
+    }
+  
+    .iconsCard img {
+      width: 40px; /* Reduce el tamaño en pantallas pequeñas */
+    }
+
+    .cart-payment h1 {
+      font-size: 1.5rem;
+    }
+  
+    .cart-payment input {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+  
+    .cart-payment button[type="submit"] {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+  
+    .cardData {
+      flex-direction: column; 
+    }
+
+    .encabezadoPayment{
+      flex-direction: column;
+    }
+  }
+  

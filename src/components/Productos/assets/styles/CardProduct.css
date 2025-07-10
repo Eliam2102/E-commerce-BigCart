@@ -1,0 +1,273 @@
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  color: black;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Asegura que nada se desborde fuera de la tarjeta */
+  max-width: 300px; /* Limitar el tamaño máximo para mejorar la organización */
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 150px; 
+  height: 150px; 
+  object-fit: contain; 
+  border-radius: 8px; 
+  margin-bottom: 10px; 
+  display: block; 
+  align-self: center;
+}
+
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 0 15px; /* Separar la descripción de la categoría y precio */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limitar a 2 líneas */
+  -webkit-box-orient: vertical;
+  user-select: none;
+}
+
+.category {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px; /* Separar la categoría del precio */
+}
+
+.current-price {
+  font-size: 1.8rem; /* Tamaño de fuente moderadamente grande */
+  color: #28a745; /* Verde que transmite seguridad y confianza */
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+  animation: expandEffect 2s infinite ease-in-out; /* Animación suave */
+}
+
+.current-price span {
+  animation: expandEffect 2s infinite ease-in-out;
+}
+
+/* Definimos una animación expandEffect */
+@keyframes expandEffect {
+  0% {
+    transform: scale(1); /* Empieza al tamaño original */
+    color: #28a745;  /* Verde inicial */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra inicial suave */
+  }
+  25% {
+    transform: scale(1.05);  /* Expande ligeramente */
+    color: #34d058;  /* Verde más brillante */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); /* Sombra más notoria */
+  }
+  50% {
+    transform: scale(1.1);  /* Expande un 10% */
+    color: #2ecc71;  /* Verde brillante y fresco */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+  }
+  75% {
+    transform: scale(1.05);  /* Regresa a un 5% de expansión */
+    color: #34d058;  /* Vuelve al verde brillante */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  }
+  100% {
+    transform: scale(1);  /* Regresa al tamaño original */
+    color: #28a745;  /* Regresa al verde original */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Vuelve a la sombra suave */
+  }
+}
+
+
+
+.sales {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px; 
+  user-select: none;
+}
+
+.rating {
+  font-size: 1rem;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: -10px;
+  font-weight: bold !important;
+  color: #000;
+  user-select: none;
+}
+
+.star {
+  font-size: 20px;
+  margin-right: 3px;
+  padding: 2px;
+  -webkit-text-stroke: .5px black;
+  user-select: none;
+}
+
+.star.full {
+  color: gold;
+  user-select: none;
+}
+
+.star.half {
+  color: gold;
+  background: linear-gradient(to right, gold 50%, lightgray 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.star.empty {
+  color: lightgray;
+  user-select: none;
+}
+
+.rating-number {
+  font-size: 16px;
+  margin-left: 8px;
+  color: #555;
+  user-select: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espacio entre los botones */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.btn-container .btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 6px 12px; /* Reducir padding para evitar bordes grandes */
+}
+
+.btn-container .btn-icon:hover {
+  transform: scale(1.2);
+}
+
+.btn-icon.like {
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Alineado a la esquina superior izquierda */
+}
+
+.btn-icon.details {
+  color: #024caa;
+  position: absolute;
+  bottom: 10px;
+  left: 10px; /* Alineado a la esquina inferior izquierda */
+}
+
+.btn-icon.add-to-cart {
+  color: #007bff;
+  position: absolute;
+  top: 10px;
+  right: 7px; 
+  background: none;
+  border: none; 
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulseEffect 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.btn-icon.add-to-cart:focus{
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 15px;
+    max-width: 100%; /* Asegura que ocupe todo el ancho posible en pantallas pequeñas */
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
+
+  .current-price {
+    font-size: 1.3rem;
+  }
+
+  .rating-number {
+    font-size: 14px;
+  }
+
+  .btn-icon {
+    font-size: 1.2rem;
+    padding: 6px; /* Reducir tamaño y padding de los botones en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%; /* La tarjeta ocupará todo el ancho de la pantalla */
+  }
+
+  .product-image {
+    max-height: 180px; /* Limitar el tamaño de la imagen */
+  }
+
+  .product-name {
+    font-size: 1rem;
+  }
+
+  .current-price {
+    font-size: 1.2rem;
+  }
+
+  .rating-number {
+    font-size: 12px;
+  }
+}

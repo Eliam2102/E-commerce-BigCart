@@ -1,0 +1,91 @@
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Toma el 100% del ancho asignado por la cuadrícula */
+  height: auto;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.skeleton-image {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantiene proporción similar a una imagen */
+  background: linear-gradient(90deg, #ececec 25%, #f3f3f3 50%, #ececec 75%);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-content {
+  width: 100%;
+}
+
+.skeleton-title,
+.skeleton-description,
+.skeleton-category,
+.skeleton-price,
+.skeleton-sales,
+.skeleton-button {
+  height: 16px;
+  background: linear-gradient(90deg, #ececec 25%, #f3f3f3 50%, #ececec 75%);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 20px;
+}
+
+.skeleton-description {
+  width: 90%;
+  height: 16px;
+}
+
+.skeleton-category {
+  width: 50%;
+}
+
+.skeleton-price {
+  width: 60%;
+  height: 20px;
+}
+
+.skeleton-sales {
+  width: 50%;
+}
+
+.skeleton-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.skeleton-star {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(90deg, #ececec 25%, #f3f3f3 50%, #ececec 75%);
+  border-radius: 50%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-button {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(90deg, #ececec 25%, #f3f3f3 50%, #ececec 75%);
+  border-radius: 50%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}

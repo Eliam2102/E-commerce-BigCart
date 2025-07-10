@@ -1,0 +1,646 @@
+/* General */
+main {
+  height: 100vh; /* O la altura de la pantalla */
+  overflow-y: scroll; /* Siempre permitir el scroll vertical */
+}
+.home {
+  font-family: 'Noto Sans', sans-serif;
+  padding: 0;
+  background-color: #F6F6F6;
+  overflow-x: hidden;
+}
+.section-title-cli {
+    font-size: 4rem;
+    color: #333333;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Diseño general de la sección */
+.minimalist-welcome {
+  background-color: #f6f6f6;
+  color: #2c3e50;
+  text-align: justify; 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  flex-direction: column;
+  margin-top: -40px;
+}
+
+
+.content-wrapper {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+}
+
+.headline,
+.subheadline-welcome {
+  max-width: 100%; /* Asegura el mismo ancho máximo */
+  text-align: justify; /* Justifica el texto */
+  margin: 0 auto; /* Centra horizontalmente */
+  line-height: 1.8; /* Espaciado entre líneas */
+}
+
+.headline {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1px;
+  margin: 0 0 20px 0;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.subheadline-welcome {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  opacity: 0;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1.5s ease-out 0.5s forwards;
+  margin: 0 0 30px 0;
+}
+
+.cta-button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #0171DC; 
+  border-radius: 50px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffffff; 
+  color: #0171DC;
+  border: 1.5px solid #0171DC;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos */
+/* Pantallas medianas (entre 768px y 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .minimalist-welcome {
+    padding: 60px 30px;
+    text-align: center;
+  }
+  .headline {
+    font-size: 2.8rem;
+  }
+  .subheadline-welcome {
+    font-size: 1rem;
+  }
+}
+
+/* Pantallas pequeñas (hasta 767px) */
+@media (max-width: 767px) {
+  .minimalist-welcome {
+    padding: 40px 15px;
+    height: auto;
+    margin-top: -152px;
+    margin-bottom: 40px;
+  }
+  .headline {
+    font-size: 2rem;  
+    font-weight: 700; 
+    text-align: center; 
+    line-height: 1.4; 
+    margin: 20px 10px;
+    color: #333; 
+    letter-spacing: 2px;
+}
+  .subheadline-welcome {
+    font-size: 0.9rem;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Categorías */
+/* Estilos para la sección de categorías */
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 20px; /* Añade espacio de 20px alrededor de todo el contenido */
+  margin: 0 20px; /* Añade margen en los lados izquierdo y derecho para dar más espacio alrededor */
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+.categories-cli {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 550px;
+  justify-content: center;
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 16px 20px;
+  margin-top: 95px;
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+
+/* Estilos para el contenedor del carrusel */
+.category-list {
+  width: 100%;
+  max-width: 1200px; /* Asegura que el carrusel no ocupe todo el ancho */
+  margin-bottom: 30px; /* Espacio debajo del carrusel */
+}
+
+/* Estilos para el botón */
+.category-button-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #EC8304; /* Mantenemos el color original */
+  color: white;
+  font-size: 16px;
+  font-weight: 500; /* Ligero grosor en el texto para un estilo más profesional */
+  text-decoration: none;
+  border: 2px solid #EC8304; /* Bordes sutiles del mismo color */
+  border-radius: 25px; /* Bordes rectos */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transiciones sutiles */
+}
+
+/* Efecto al pasar el mouse */
+.category-button-home:hover {
+  background-color: white; /* Fondo blanco para el hover */
+  color: #EC8304; /* Cambiar el color del texto al color base */
+  border-color: #EC8304; /* Aseguramos que el borde también cambie */
+}
+
+/* Efecto al hacer clic (activo) */
+.category-button-home:active {
+  background-color: #D47102; /* Un color ligeramente más oscuro al hacer clic */
+  border-color: #D47102; /* Cambio de borde al hacer clic */
+  transform: translateY(1px); /* Efecto de hundimiento sutil */
+}
+
+
+/* Animación para la entrada */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.category-card {
+  background-color: #081057;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.category-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.category-info h3 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: white;
+}
+.category-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #EC8304;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+/* Productos destacados */
+.featured-products {
+  text-align: center;
+  animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.product-list, .offer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card, .offer-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.product-card:hover, .offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img, .offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+
+
+h3 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.product-card p, .offer-details p {
+  font-size: 18px;
+  color: #EC8305;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.new-price {
+  color: #024CAA;
+  font-weight: bold;
+}
+
+.buy-now-btn {
+  background-color: #EC8305;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #DBD3D3;
+  transform: scale(1.05);
+}
+/* Bienvenida */
+.welcome-section-cat {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0px 33px;
+  max-width: 900px;
+  color: #333;
+  text-align: center;
+  animation: fadeInWelcome 1.2s ease-out forwards;
+  opacity: 0;
+  margin-left: -40px;
+}
+
+/* Estilo para el h2 en la sección bienvenida */
+.welcome-section h2 {
+  font-size: 2rem;
+  color: #024CAA;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #05AAFF;
+  padding-bottom: 10px;
+  margin-left: -3px;
+  text-align: left;
+}
+
+/* Estilo para el texto del párrafo en la sección bienvenida */
+.welcome-section p {
+  font-size: 1.15rem;
+  text-align: left; 
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #555;
+  margin-left: 0; 
+}
+
+
+
+/* Animación para bienvenida */
+@keyframes fadeInWelcome {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de transición al hacer scroll */
+.welcome-section h2:hover {
+  color: #05AAFF;
+  transition: color 0.3s ease;
+}
+
+.welcome-section p:hover {
+  color: #024CAA;
+  transition: color 0.3s ease;
+}
+
+
+/* Llamada a la acción */
+/* Estilos para la sección de llamada a la acción */
+.call-to-action {
+  background-color: #ECF1F8; /* Mantiene el color de fondo suave */
+  color: #091057; /* Mantiene el color de texto en azul oscuro */
+  padding: 80px 20px; /* Aumenta el padding para mayor espacio */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInRight 1.5s ease-in-out; /* Animación de entrada */
+  border-radius: 15px; /* Bordes redondeados para un aspecto más suave */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil para darle profundidad */
+}
+
+/* Estilo para el encabezado */
+.call-to-action h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #091057; /* Mantiene el color de texto */
+  letter-spacing: 0.5px; /* Añade un poco de espaciado entre letras */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas para mayor impacto */
+}
+
+/* Estilo para el párrafo */
+.call-to-action p {
+  margin-bottom: 30px;
+  font-size: 1.1rem; /* Ajusta el tamaño de fuente */
+  color: #4C4C6C; /* Color gris más suave para el párrafo */
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto; /* Centra el párrafo */
+}
+
+/* Estilo para el botón */
+.sign-up-btn {
+  background-color: #091057; /* Fondo oscuro para el botón */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px; /* Botón redondeado */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase; /* Hace que el texto del botón sea en mayúsculas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+}
+
+.sign-up-btn:hover {
+  background-color: #EC8304; /* Cambia el color del fondo al pasar el ratón */
+  transform: translateY(-3px);
+  color: white; /* Añade un efecto de desplazamiento sutil al pasar el ratón */
+}
+
+.sign-up-btn:focus {
+  outline: none; /* Elimina el contorno al hacer clic */
+}
+
+
+/* Animación de FadeIn desde abajo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Estilos generales */
+
+.customer-reviews {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.customer-reviews-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Contenedor responsivo con grid */
+.customer-reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tarjetas de reseñas */
+.customer-review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customer-review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen circular del cliente */
+.customer-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #e0e0e0;
+  object-fit: cover;
+}
+
+.customer-review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.customer-review-text {
+  font-size: 1rem;
+  font-style: italic;
+  color: #666;
+  margin: 10px 0;
+}
+
+.customer-review-author {
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.customer-rating {
+  font-size: 1.2rem;
+  color: #f4b400;
+}
+
+/* RESPONSIVIDAD */
+@media (min-width: 481px) and (max-width: 1200px) {
+  .customer-reviews {
+    margin-top: 230px; /* Ajusta el valor según lo que necesites */
+  }
+  .categories-cli {
+    margin-top: 250px;
+    margin-bottom: 290px;
+  }
+}
+/* Pantallas pequeñas (smartphones) */
+@media (max-width: 576px) {
+  .customer-reviews-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .categories-cli {
+    margin-top: 250px;
+    margin-bottom: 290px;
+  }
+  .customer-reviews-container {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .customer-review-card {
+    padding: 15px;
+  }
+
+  .customer-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .customer-review-text {
+    font-size: 0.9rem;
+  }
+
+  .customer-rating {
+    font-size: 1rem;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 577px) and (max-width: 992px) {
+  .customer-reviews-title {
+    font-size: 2rem;
+  }
+  .categories-cli {
+    margin-top: 250px;
+    margin-bottom: 290px;
+  }
+
+  .customer-reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-review-card {
+    padding: 20px;
+  }
+}
+
+/* Pantallas grandes (desktops y más) */
+@media (min-width: 993px) {
+  .customer-reviews-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .customer-reviews-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .customer-review-card {
+    padding: 25px;
+  }
+
+  .customer-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .customer-review-text {
+    font-size: 1.1rem;
+  }
+
+  .customer-rating {
+    font-size: 1.2rem;
+  }
+}

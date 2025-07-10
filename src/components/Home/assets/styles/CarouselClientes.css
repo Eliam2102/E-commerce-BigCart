@@ -1,0 +1,177 @@
+/* Sección general */
+.benefits-section {
+  background: transparent;
+  text-align: center;
+  padding: 20px; /* Espaciado para mejorar en móviles */
+}
+
+/* Contenedor principal */
+.benefits-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Límite máximo para pantallas grandes */
+  margin: 0 auto;
+  gap: 20px;
+  padding: 0 15px; /* Espaciado lateral */
+}
+
+/* Contenido de texto */
+.benefits-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.benefits-title {
+  font-size: 2rem; /* Tamaño ajustado */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.benefits-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  font-size: 1rem;
+  color: #6a1b9a;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: "✔";
+  color: #6a1b9a;
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+
+/* Visual de logotipos */
+.benefits-logos {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-container {
+  width: 120px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+  .benefits-content {
+    flex-wrap: nowrap; /* Mantiene una sola fila */
+    gap: 30px; /* Más espacio entre elementos */
+  }
+
+  .benefits-text {
+    text-align: left; /* Texto alineado a la izquierda */
+  }
+
+  .benefits-title {
+    font-size: 2.5rem; /* Más grande para pantallas amplias */
+  }
+
+  .benefits-description {
+    font-size: 1.125rem; /* Aumenta un poco el texto descriptivo */
+  }
+
+  .logo-container {
+    width: 150px;
+    height: 120px; /* Logotipos más grandes */
+  }
+}
+
+/* Pantallas medianas */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .benefits-content {
+    flex-direction: column; /* Cambia a diseño vertical */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .benefits-text {
+    text-align: center;
+  }
+
+  .benefits-title {
+    font-size: 2rem;
+  }
+
+  .benefits-description {
+    font-size: 1rem;
+  }
+
+  .logo-container {
+    width: 130px;
+    height: 110px; /* Tamaño ajustado */
+  }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 768px) {
+  .benefits-content {
+    flex-direction: column; /* Elementos apilados */
+    padding: 0 10px; /* Ajusta el padding */
+  }
+
+  .benefits-text {
+    text-align: center;
+  }
+
+  .benefits-title {
+    font-size: 1.75rem; /* Tamaño más pequeño */
+  }
+
+  .benefits-description {
+    font-size: 0.95rem; /* Descripción más pequeña */
+  }
+
+  .benefits-list li {
+    padding-left: 0;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 80px; /* Logotipos más pequeños */
+  }
+}

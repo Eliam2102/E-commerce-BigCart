@@ -1,0 +1,141 @@
+/* Contenedor principal */
+.intro-products {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Título de la sección */
+.section-title {
+  font-size: 4rem;
+  color: #333333;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contenedor de contenido */
+.intro-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+
+/* Slider */
+.slider-container {
+  overflow: hidden;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none !important;
+}
+
+.slider-track {
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.slider-image-prod {
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image-prod:hover {
+  transform: scale(1.05);
+}
+
+/* Texto */
+.text-content {
+  max-width: 400px;
+  text-align: left;
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0171DC;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.intro-title p {
+  text-align: justify;
+  text-align-last: justify; 
+  margin: 10px 0;
+  line-height: 1.6; 
+  hyphens: auto;
+  color: #333
+}
+
+.intro-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Botón */
+.explore-button {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #ec8304;
+  border: 2px solid #ec8304;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: 120px;
+}
+
+.explore-button:hover {
+  transform: scale(1.05);
+  border: 2px solid #0171DC;
+  color: #0171DC;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .intro-title {
+    font-size: 1.75rem;
+  }
+
+  .intro-description {
+    font-size: 0.9rem;
+  }
+
+  .explore-button {
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+}

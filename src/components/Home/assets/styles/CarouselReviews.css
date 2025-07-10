@@ -1,0 +1,153 @@
+.customer-reviews {
+  text-align: center;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+  padding: 40px 20px;
+  position: relative; /* Para posicionar los controles */
+}
+
+.customer-reviews-title {
+  font-size: 4rem;
+  color: #333333;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.customer-reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Permite el ajuste automático de las tarjetas */
+  position: relative; /* Para que los controles estén en relación al contenedor */
+}
+
+.reviews-wrapper {
+  display: flex;
+  gap: 70px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.customer-review-card {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  max-width: 300px;
+  text-align: left;
+}
+
+.customer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.customer-review-content {
+  text-align: left;
+}
+
+.customer-review-author {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.customer-review-time {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.customer-review-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.controls {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  padding: 0 10px;
+}
+
+.control-button {
+  background-color: transparent;
+  color: rgb(111, 109, 109);
+  border: none;
+  font-weight: bold;
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px; /* Tamaño ajustado para pantallas pequeñas */
+  cursor: pointer;
+  font-size: 20px; /* Tamaño reducido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-button:hover {
+  background-color: rgba(128, 128, 128, 0.661);
+  border: none;
+}
+
+.control-button:focus, .control-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.control-button.left {
+  margin-left: 10px; /* Distancia uniforme del borde izquierdo */
+}
+
+.control-button.right {
+  margin-right: 10px; /* Distancia uniforme del borde derecho */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .controls{
+    width: 100%
+  }
+  .customer-reviews-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .reviews-wrapper {
+    gap: 20px; /* Menor espacio entre tarjetas */
+  }
+
+  .customer-review-card {
+    max-width: 100%; /* Tarjetas ocupan todo el ancho */
+  }
+
+  .control-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px; /* Tamaño reducido */
+  }
+}
+
+@media (max-width: 480px) {
+  .controls {
+    width: 119%;
+    margin-left: -52px;
+}
+  .customer-reviews-title {
+    font-size: 28px;
+  }
+
+  .reviews-wrapper {
+    flex-direction: column; /* Las tarjetas se apilan verticalmente */
+    gap: 15px;
+  }
+
+  .customer-review-card {
+    padding: 15px;
+  }
+}

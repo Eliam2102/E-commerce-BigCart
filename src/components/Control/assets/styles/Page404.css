@@ -1,0 +1,23 @@
+.page-404-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    padding-bottom: 200px;
+  }
+  
+  .page-404-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .page-404-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .page-404-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+  }
+  

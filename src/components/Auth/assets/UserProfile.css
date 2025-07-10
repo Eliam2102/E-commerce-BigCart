@@ -1,0 +1,331 @@
+/* Contenedor principal */
+.user-profile {
+    display: flex;
+    padding: 35px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    /*border: solid #024CAA;*/
+    width: 100%;
+    margin: 50px auto;
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Título */
+  .user-profile h2 {
+    font-size: 2rem;
+    color: #024CAA;
+    margin-bottom:-20px;
+    text-align: right;
+    border-bottom: 2px solid #EC8304;
+    padding-bottom: 10px;
+    margin-top: -0.3rem;
+  }
+
+  .user-profile h4 {
+    font-size: 13px;
+    text-align: left; 
+    color: rgba(64, 64, 64, 0.542);
+    margin: 0px;
+    align-self: flex-start; 
+  }
+
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    align-items: center;
+    padding-left: 20rem ;
+    width: 40%;
+    
+  }
+  
+  /* Imagen de perfil */
+  .profile-image-container {
+    position: relative;
+    margin-bottom: 10px;
+    margin:0px 20rem;
+    width: 270px;
+    height: 270px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 2rem;
+    border: 4px solid #EC8304;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Input */
+  .user-info-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+    margin-left: 4rem;
+    gap: 9px;
+    
+  }
+  
+  #user-profile-info {
+    width: 65%;
+    border: none;
+    border-bottom: 2px solid #716e6e83;
+    border-radius: 0;
+    background-color: transparent;
+    color: rgb(7, 7, 7);
+    padding: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .user-input:focus {
+    box-shadow: 0 0 10px rgba(32, 148, 250, 0.2);
+    border: 1px solid #024CAA;
+    outline: none;
+  }
+  
+  /* Botones */
+  .buttons-container {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  .cancel-button,
+  .save-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #D9534F;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c12e2a;
+  }
+  
+  .save-button {
+    background-color: #EC8304;
+  }
+  
+  .save-button:hover {
+    background-color: #d96f03;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+@media (max-width: 12000px) {
+  .user-profile {
+    padding: 25px;
+    margin: 30px auto;
+  }
+
+  .image-container {
+    padding-left: 5rem;
+    width: 60%;
+  }
+
+  .profile-image-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 5rem;
+  }
+
+  .user-info-form {
+    width: 70%;
+    margin-left: -5rem;
+  }
+
+  .buttons-container {
+    width: 260px;
+    margin-left: 5rem;
+    text-align: center;
+  }
+}
+/* Media Query para pantallas medianas (entre 768px y 1199px) */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .user-profile {
+    /*display: flex;
+    flex-direction: column; /* Mantener disposición en fila 
+    padding: 25px;
+    margin: 30px auto;
+    border: solid black;
+    text-align: center;*/
+    flex-direction: column;
+    padding: 15px;
+    margin: 0px;
+    border: solid black;
+  }
+
+  .user-profile h2 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  .user-profile h4 {
+    font-size: 14px;
+    margin-left: 12em;
+    /*text-align: left;*/
+  }
+
+  .image-container {
+    padding-left: 0rem;
+    width: 100%;
+  }
+
+  .profile-image-container {
+    width: 230px;
+    height: 230px;
+    margin: 0 10rem;
+  }
+
+  .user-info-form {
+    width: 100%;
+    margin: 0;
+    margin-top: 2.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .buttons-container {
+    width: 250px;
+    display: flex;
+    margin-left: -0.01rem;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .cancel-button,
+  .save-button {
+    width: 45%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    color: white;
+  }
+
+  .cancel-button {
+    background-color: #D9534F;
+  }
+
+  .cancel-button:hover {
+    background-color: #c12e2a;
+  }
+
+  .save-button {
+    background-color: #EC8304;
+  }
+
+  .save-button:hover {
+    background-color: #d96f03;
+  }
+}
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+  .user-profile {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 16px;
+    border: solid 1px black;
+    box-sizing: border-box;
+  }
+
+  .user-profile h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .user-profile h4 {
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .user-info-form {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    width: 100%; 
+    max-width: 500px; 
+    margin: 2rem 60rem; 
+    padding-left: 4rem;
+    border-radius: 8px; 
+    box-sizing: border-box;
+    background-color: transparent; 
+  }
+
+  .user-info-form input {
+    width: 100%; 
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    margin-left: -6rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .buttons-container {
+    width: 60%;
+    margin-left: -5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cancel-button, .save-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+
+
+  

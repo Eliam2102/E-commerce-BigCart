@@ -1,0 +1,56 @@
+body {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para SocialBar */
+.social-bar {
+    position: fixed;
+    left: 0;
+    top: 62%;  /* Centra la barra verticalmente */
+    transform: translateY(-50%);  /* Asegura que se centre exactamente */
+    background-color: white;
+    z-index: 9999;
+}
+
+/* Estilos para los íconos de las redes sociales */
+.social-bar__item {
+    padding: 15px 15px;  /* Aumenta el tamaño del padding para íconos más grandes */
+    color: white;
+    font-size: 40px;  /* Aumenta el tamaño de los íconos */
+    text-align: center;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.social-bar__item:hover {
+    transform: translate(15px);
+    opacity: 0.9;
+}
+
+/* Colores específicos para cada red social */
+.social-bar__fb {
+    background-color: #3b5999;
+}
+
+.social-bar__twitter {
+    background-color: #55acee;
+}
+
+.social-bar__linkedin {
+    background-color: #0077B5;
+}
+
+.social-bar__instagram {
+    background-color: #e4405f;
+}
+
+/* Aquí ya no necesitamos Pinterest, lo eliminamos */
+.social-bar__whatsapp {
+    background-color: #25D366;  /* Color para WhatsApp */
+}
+
+/* Responsividad para móviles: la barra se oculta */
+@media screen and (max-width: 768px) {
+    .social-bar {
+        display: none;  /* Ocultamos la barra en pantallas móviles */
+    }
+}

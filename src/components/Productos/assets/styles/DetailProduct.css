@@ -1,0 +1,197 @@
+/* ProductDetails.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.product-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1000px; /* Aumenta ligeramente el ancho máximo */
+  width: 90%; /* Utiliza un porcentaje para una mejor adaptabilidad */
+  height: 500px; /* Ajusta la altura según sea necesario */
+}
+
+.product-image-de {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9; /* Fondo neutro para el contenedor */
+  overflow: hidden;
+}
+
+.product-image-de img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Asegura que las imágenes se adapten sin distorsionarse */
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1.5; /* Ajusta el ancho proporcionalmente */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.product-category,
+.product-sku {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.product-details p {
+  margin-bottom: 0px !important;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #05AAFF;
+}
+
+.product-stock {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.product-stock.in-stock {
+  color: #4caf50;
+}
+
+.product-stock.out-of-stock {
+  color: #f44336;
+}
+
+.product-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.back-btn:hover {
+  background-color: #d6d6d6;
+}
+
+.add-to-cart-btn {
+  background-color: #05AAFF;
+  color: #ffffff;
+  display: flex;            /* Usamos Flexbox */
+  align-items: center !important;      /* Alineamos verticalmente los elementos en el centro */
+  justify-content: center !important;  /* Centra el contenido horizontalmente */
+  padding: 6px 4px !important;      /* Añadimos algo de padding para hacerlo más grande */
+  border: none !important;             /* Elimina los bordes del botón */
+  cursor: pointer !important;         /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px !important;       /* Bordes redondeados */
+}
+
+.add-to-cart-btn svg {
+  margin-left: 8px !important;        /* Espacio entre el icono y el texto */
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #f8bbd0;
+  cursor: not-allowed;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #38b6f4;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .product-container {
+    flex-direction: column;
+    max-width: 700px;
+    height: auto; /* Permite que la altura sea dinámica */
+  }
+
+  .product-image-de {
+    height: 300px;
+  }
+
+  .product-image-de img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-info {
+    padding: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+}

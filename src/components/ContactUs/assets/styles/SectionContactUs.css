@@ -1,0 +1,281 @@
+/* Estilos Generales */
+main {
+  height: 100vh; /* O la altura de la pantalla */
+  overflow-y: scroll; /* Siempre permitir el scroll vertical */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+}
+
+.right_conatct_social_icon {
+  background: linear-gradient(to top right, #1325e8 -5%, #8f10b7 100%);
+}
+
+.contact_us {
+  background-color: #f1f1f1;
+  padding: 60px 20px; /* Ajuste para que tenga espacio en pantallas pequeñas */
+}
+
+.contact_inner {
+  background-color: #fff;
+  position: relative;
+  box-shadow: 20px 22px 44px #cccc;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.contact_inner h1 {
+  color: #000;
+}
+
+/* Contact Field */
+.contact_field {
+  padding: 40px;
+}
+
+.contact_field h3 {
+  color: #000;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact_field p {
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact_field .form-control {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.contact_field .form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #1325e8;
+}
+
+.contact_field .form-control::placeholder {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+#form-control-textarea {
+  background-color: #fff;
+  height: 145px;
+  resize: none;
+  color: #000;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0;
+}
+
+#form-control-textarea:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #1325e8;
+}
+
+button.contact_form_submit {
+  background: #EC8304;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  width: 100%;
+  margin-top: 25px;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* Contact Info */
+.contact_info_sec {
+  position: relative;
+  background-color: #0171DC;
+  padding: 20px 30px; /* Ajustar padding para mejor legibilidad */
+  border-radius: 15px; /* Menor radio para un diseño más moderno */
+  color: #fff;
+  margin-top: 20px;
+  overflow: hidden; /* Evitar desbordamientos */
+  text-align: left; /* Asegura que el texto se alinee correctamente */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+.info_single {
+  display: flex; /* Alineación horizontal de íconos y texto */
+  align-items: center; /* Centra verticalmente íconos y texto */
+  gap: 10px; /* Espacio entre el ícono y el texto */
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+.info_single span {
+  font-size: 16px; /* Tamaño de texto mejorado para legibilidad */
+  font-weight: bold; /* Mantén negrita para destacar */
+  color: #fff; /* Color de acento */
+  letter-spacing: 0.5px; /* Ajuste menor de espacio entre letras */
+  line-height: 1.4; /* Mejora la separación entre líneas */
+  word-wrap: break-word; /* Evita desbordamientos de texto */
+  margin-bottom: -7px;
+}
+
+.info_single svg, 
+.info_single i {
+  flex-shrink: 0; /* Evita que los íconos cambien de tamaño */
+  width: 24px; /* Tamaño del ícono uniforme */
+  height: 24px;
+  color: #fff; /* Color para que los íconos sean legibles */
+}
+
+/* Sección del Mapa */
+.map_sec {
+  padding: 50px 15px; /* Espaciado superior e inferior adecuado */
+  background-color: #f1f1f1; /* Fondo claro para contraste con el mapa */
+  text-align: center; /* Alineación del texto en el centro */
+}
+
+.map_inner {
+  border-radius: 15px; /* Bordes redondeados para un diseño más suave */
+  padding: 25px; /* Espaciado interno adecuado */
+  position: relative;
+}
+
+.map_inner h4 {
+  color: #081057; /* Color oscuro para el encabezado */
+  font-size: 24px; /* Tamaño de fuente adecuado */
+  font-weight: 600; /* Negrita para destacar */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.map_inner p {
+  color: #333; /* Color de texto oscuro para mejor legibilidad */
+  font-size: 16px; /* Tamaño de texto adecuado */
+  font-weight: 400;
+  margin-bottom: 20px; /* Espacio entre el texto y el mapa */
+}
+
+.map_bind {
+  margin-top: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%; /* Asegura que el mapa ocupe todo el ancho */
+  height: 450px; /* Ajuste de altura para el mapa */
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para pantallas pequeñas */
+  .map_sec {
+    padding: 30px 10px; /* Reducción de padding */
+  }
+
+  .map_inner {
+    padding: 15px; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .map_inner h4 {
+    font-size: 20px; /* Tamaño de texto más pequeño en móviles */
+  }
+
+  .map_inner p {
+    font-size: 14px; /* Reducción del tamaño del texto */
+  }
+
+  .map_bind {
+    height: 250px; /* Reducir la altura del mapa en pantallas pequeñas */
+  }
+}
+
+/* Media Queries */
+
+/* Pantallas grandes (Desktop) */
+@media (min-width: 992px) {
+  .contact_us {
+    padding: 120px 0;
+  }
+
+  .contact_field {
+    padding: 60px 340px 90px 100px;
+  }
+
+  .contact_field h3 {
+    font-size: 40px;
+  }
+
+  .contact_field .form-control {
+    width: 489px;
+  }
+
+  #form-control-textarea {
+    width: 489px !important;
+    margin-left: 8px !important;
+  }
+
+  .contact_info_sec {
+    position: absolute;
+    right: 1px;
+    top: 26%;
+    height: 340px;
+    width: 340px;
+    border-radius: 25px 0 0 25px;
+  }
+
+  button.contact_form_submit {
+    margin-left: 100px;
+  }
+}
+
+/* Pantallas medianas (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact_field {
+    padding: 40px;
+  }
+
+  .contact_field h3 {
+    font-size: 32px;
+  }
+
+  .contact_info_sec {
+    position: static;
+    width: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Pantallas pequeñas (Móviles) */
+@media (max-width: 767px) {
+  .contact_field {
+    padding: 20px;
+  }
+
+  .contact_field h3 {
+    font-size: 24px;
+  }
+
+  .contact_field p {
+    font-size: 14px;
+  }
+
+  .contact_info_sec {
+    /* position: static;
+    width: 100%;
+    margin-top: 20px; */
+    display: none;
+  }
+
+  button.contact_form_submit {
+    margin-left: 0;
+    width: 100%; 
+  }
+}
