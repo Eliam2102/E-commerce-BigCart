@@ -1,0 +1,107 @@
+[
+  {
+    "idProducto": 1,
+    "nombre": "6 Blade Starter Kit",
+    "cantidad": 1,
+    "precio": 10.00,
+    "imagen": "https://picsum.photos/seed/blade/80"
+  },
+  {
+    "idProducto": 2,
+    "nombre": "Shave Cream",
+    "cantidad": 2,
+    "precio": 5.00,
+    "imagen": "https://picsum.photos/seed/cream/80"
+  },
+  {
+    "idProducto": 3,
+    "nombre": "Razor Handle",
+    "cantidad": 1,
+    "precio": 8.00,
+    "imagen": "https://picsum.photos/seed/razor/80"
+  },
+  {
+    "idProducto": 4,
+    "nombre": "Face Moisturizer",
+    "cantidad": 1,
+    "precio": 12.00,
+    "imagen": "https://picsum.photos/seed/moisturizer/80"
+  },
+  {
+    "idProducto": 5,
+    "nombre": "Hair Styling Gel",
+    "cantidad": 1,
+    "precio": 7.50,
+    "imagen": "https://picsum.photos/seed/gel/80"
+  },
+  {
+    "idProducto": 6,
+    "nombre": "Toothpaste",
+    "cantidad": 3,
+    "precio": 4.00,
+    "imagen": "https://picsum.photos/seed/toothpaste/80"
+  },
+  {
+    "idProducto": 7,
+    "nombre": "Body Wash",
+    "cantidad": 1,
+    "precio": 9.00,
+    "imagen": "https://picsum.photos/seed/bodywash/80"
+  },
+  {
+    "idProducto": 8,
+    "nombre": "Deodorant",
+    "cantidad": 2,
+    "precio": 6.00,
+    "imagen": "https://picsum.photos/seed/deodorant/80"
+  },
+  {
+    "idProducto": 9,
+    "nombre": "Shampoo",
+    "cantidad": 1,
+    "precio": 8.50,
+    "imagen": "https://picsum.photos/seed/shampoo/80"
+  },
+  {
+    "idProducto": 10,
+    "nombre": "Conditioner",
+    "cantidad": 1,
+    "precio": 8.50,
+    "imagen": "https://picsum.photos/seed/conditioner/80"
+  },
+  {
+    "idProducto": 11,
+    "nombre": "Face Scrub",
+    "cantidad": 1,
+    "precio": 11.00,
+    "imagen": "https://picsum.photos/seed/scrub/80"
+  },
+  {
+    "idProducto": 12,
+    "nombre": "Lip Balm",
+    "cantidad": 3,
+    "precio": 3.00,
+    "imagen": "https://picsum.photos/seed/lipbalm/80"
+  },
+  {
+    "idProducto": 13,
+    "nombre": "Beard Oil",
+    "cantidad": 1,
+    "precio": 15.00,
+    "imagen": "https://picsum.photos/seed/beardoil/80"
+  },
+  {
+    "idProducto": 14,
+    "nombre": "Hand Sanitizer",
+    "cantidad": 2,
+    "precio": 4.50,
+    "imagen": "https://picsum.photos/seed/sanitizer/80"
+  },
+  {
+    "idProducto": 15,
+    "nombre": "Foot Cream",
+    "cantidad": 1,
+    "precio": 9.00,
+    "imagen": "https://picsum.photos/seed/footcream/80"
+  }
+]
